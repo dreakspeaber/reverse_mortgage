@@ -7,9 +7,9 @@ To start the project :
 
 Project components : -
 
-   API app : serving API / http endpoints with template and JSON responses
+        API app : serving API / http endpoints with template and JSON responses
 
-   mortgage package : Serving key mortgage classes (That does the mortgage calculations, and have mortgage key configurations) with respective tests for them.  
+        mortgage package : Serving key mortgage classes (That does the mortgage calculations, and have mortgage key configurations) with respective tests for them.  
    
 
    Design choices : - 
