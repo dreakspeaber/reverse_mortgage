@@ -20,10 +20,10 @@
       <br /><br /><br />
       <div class="row">
         <form class="col-3" id="principal_limit_form">
-          <label class="form-label">Age</label>
+          <label for="age" class="form-label">Age</label>
           <input type="number" class="form-control" id="age" placeholder="0" />
           <br />
-          <label class="form-label">Property Value</label>
+          <label for="property_value" class="form-label">Property Value</label>
           <input
             type="number"
             class="form-control"
@@ -35,12 +35,11 @@
         </form>
         <div class="col-3 offset-3">
           <div>
-          <span style="display: inline;">Margin</span>
-          &nbsp;
-          <select name="margin" id="margin"></select>
-
+            <span style="display: inline">Margin</span>
+            &nbsp;
+            <select name="margin" id="margin"></select>
           </div>
-          <br>
+          <br />
           <h4>Principal Amount: &nbsp; <span id="pl_amount"> </span></h4>
         </div>
       </div>
@@ -52,10 +51,12 @@
         .getElementById("margin")
         .addEventListener("change", updateMarginValue);
 
-      let mortgage_data = {};
+      var mortgage_data = {};
       document
         .getElementById("submitBtn")
         .addEventListener("click", async function () {
+          event.preventDefault(); // Add this line
+
           const age = document.getElementById("age").value;
           const property_value =
             document.getElementById("property_value").value;
