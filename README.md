@@ -2,8 +2,15 @@
 
 
 To start the project : - 
-       python -m venv env #create environment 
-       python manage.py runserver
+
+        python -m venv env #create environment 
+        python manage.py runserver
+
+
+To run tests : -
+
+        pytest
+
 
 Project components : -
 
