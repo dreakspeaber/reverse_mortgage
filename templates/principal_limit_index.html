@@ -83,7 +83,9 @@
             if (!response.ok) {
               const responseData = await response.json();
               console.log(responseData);
-              throw new Error(`Error : ${JSON.stringify(responseData)}`);
+              throw new Error(`Error : ${Object.values(responseData).join(', ')}`);
+
+
             }
 
             const responseData = await response.json();
